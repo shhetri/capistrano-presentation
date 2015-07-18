@@ -81,9 +81,8 @@
 				<section>
 					<h2>Who AM I?</h2>
 					<p>Sumit Chhetri</p>
-					<p>Jr. Software Engineer</p>
+					<p>Jr. Software Engineer @ YIPL</p>
 					<p>PHP & Laravel Developer</p>
-					<p>Team Lead in AgentCis project</p>
 				</section>
 				<section>
 					<section>
@@ -100,22 +99,25 @@
 						<h2>Deployment Goals</h2>
 					</section>
 					<section>
-						<p>One-click / continuous deploys</p>
+						<p>One-click / command deployment</p>
+					</section>
+					<section>
+						<p>Easy to integrate with PHP projects</p>
 					</section>
 					<section>
 						<p>Anytime & Anywhere</p>
 					</section>
 					<section>
-						<p>Anyone</p>
+						<p>Anyone (with permission) can deploy</p>
 					</section>
 					<section>
-						<p>No downtime</p>
+						<p>Nominal/No downtime (ZDD - zero downtime deployment)</p>
 					</section>
 					<section>
 						<p>Reliable Rollbacks</p>
 					</section>
 					<section>
-						<p>Reusable</p>
+						<p>Reusable and can be replicated</p>
 					</section>
 					<section>
 						<p>Scalable</p>
@@ -129,7 +131,7 @@
 						<p>Deployments become much less error-prone and much more repeatable</p>
 					</section>
 					<section>
-						<p>Anyone in the team can deploy software</p>
+						<p>Anyone in the team with permission can deploy software</p>
 					</section>
 					<section>
 						<p>Engineers spend their time developing software</p>
@@ -138,13 +140,68 @@
 						<p>Deploying to somewhere new is not a headache</p>
 					</section>
 					<section>
-						<p>You can release more frequently</p>
+						<p>You can release features more frequently as its easy and automated</p>
 					</section>
+				</section>
+				<section>
+					<h2>Good, but how do developers deploy?</h2>
+					<img src="images/deployment-tools-np.png" class="no-margin">
+					<div class="small-text">Source: <a href="http://bit.ly/sw-eng-np-pt3">Geshan.com.np</a></div>
+				</section>
+				<section>
+					<h2>Deploying with FTP now is like...</h2>
+					<img src="images/deploy-with-ftp.gif" class="no-margin" width="700px">
+					<div class="small-text">Source: <a href="http://devopsreactions.tumblr.com/post/123448773080/continuous-delivery-the-manual-way">devopsreactions.tumblr.com</a></div>
+				</section>
+				<section>
+					<h2>Deployment tools, what are the popular ones</h2>
+					<table>
+						<thead>
+							<td>Tool</td>
+							<td>Written In</td>
+							<td>Github Stars</td>
+							<td>Github Watchers</td>
+						</thead>
+						<tr>
+							<td><a href="http://capistranorb.com/">Capistrano</a></td>
+							<td>Ruby</td>
+							<td><a href="https://github.com/capistrano/capistrano">7827</a></td>
+							<td>325</td>
+						</tr>
+						<tr>
+							<td><a href="http://mina-deploy.github.io/mina//">Mina</a></td>
+							<td>Ruby</td>
+							<td><a href="https://github.com/mina-deploy/mina">2619</a></td>
+							<td>91</td>
+						</tr>
+						<tr>
+							<td><a href="http://www.fabfile.org/">Fabric</a></td>
+							<td>Python</td>
+							<td><a href="https://github.com/fabric/fabric">5615</a></td>
+							<td>304</td>
+						</tr>
+						<tr>
+							<td><a href="http://rocketeer.autopergamene.eu/">Rocketeer</a></td>
+							<td>PHP</td>
+							<td><a href="https://github.com/rocketeers/rocketeer">1664</a></td>
+							<td>84</td>
+						</tr>
+						<tr>
+							<td><a href="http://magephp.com/">Magallanes</a></td>
+							<td>PHP</td>
+							<td><a href="https://github.com/andres-montanez/Magallanes">385</a></td>
+							<td>23</td>
+						</tr>
+					</table>
+					<div class="small-text">Source: Github.com, data from 16-Jul-2015</div>
 				</section>
 				<section>
 					<section>
 						<h2>Capistrano</h2>
 						<p>A remote server automation and deployment tool written in Ruby</p>
+					</section>
+					<section>
+						<p>We chose capistrano because it is popular and most importantly fits for our use-case</p>
 					</section>
 					<section>
 						<p>Originally a tool for deploying code</p>
@@ -160,7 +217,6 @@
 					</section>
 					<section>
 						<p>Support these VCS out of the box</p>
-						
 						<ul>
 							<li>Git 1.8 or higher</li>
                             <li>Mercurial</li>
@@ -178,7 +234,7 @@
 					</section>
 					<section>
 						<p>SSH access to all servers,<p>
-						</p>preferably with public keys</p>
+						</p>recommended with public keys (password less)</p>
 					</section>
 				</section>
 				<section>
@@ -189,7 +245,7 @@
 							<li>Recipe</li>
 							<li>Namespace</li>
 							<li>Role</li>
-							<li>Staging</li>
+							<li>Stages</li>
 						</ul>
 					</section>
 					<section>
@@ -205,7 +261,7 @@
 					<section>
 						<h2>Namespace</h2>
 						<p>Organizes tasks within recipes and</p>
-						<p>avoids naming collisions.</p>
+						<p>avoids naming collisions</p>
 					</section>
 					<section>
 						<h2>Role</h2>				
@@ -215,10 +271,10 @@
 						<p>web</p>
 					</section>
 					<section>
-						<h2>Staging</h2>
-						<p>Refers to each environment being a stage.</p>				
-						<p>Usually means different servers.</p>
-						<p>Can also include configuration.</p>
+						<h2>Stages</h2>
+						<p>Refers to each environment being a stage like dev, staging, testing, production.</p>
+						<p>Usually means different set of servers.</p>
+						<p>Can also include configuration per stage.</p>
 						<p>Or even different tasks.</p>
 					</section>
 				</section>
@@ -272,7 +328,13 @@
     						</pre>
 					</section>
 				<section>
+					<h2>Next Steps?</h2>
+					<p><a href="http://blog.flowdock.com/2014/11/11/chatops-devops-with-hubot/">Chat ops</a> with deploying from Hipchat using Hubot</p>
+					<p><a href="https://docker.com/">Docker</a> deployment but looks like a problem in Internet challenged Nepal :)</p>
+				</section>
+				<section>
 						<h2>Demo</h2>
+					<p>Put a screen-shot here :)</p>
 				</section>
 				<section>
 					<h2>Any Questions???</h2>
@@ -280,12 +342,7 @@
 				<section>
 					<h2>Thank you</h2>
 				</section>
-
-				<!-- Example of nested vertical slides -->
-				
-
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
