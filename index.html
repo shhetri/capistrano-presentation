@@ -41,16 +41,14 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h2>Automated Deployment With</h2>
-					<h2>Capistrano</h2>
+					<h2>Still stuck with FTP or git pull to deploy?</h2>
+					<h2>It is high time to embrace Automated Deployment with Capistrano</h2>
+					<hr>
 					<p>
-						<small>Created by <a href="https://www.facebook.com/SHhetri">Sumit Chhetri</a> / <a href="https://twitter.com/shhetri">@shhetri</a></small>
+						<small>Created by <a href="https://www.facebook.com/SHhetri">Sumit Chhetri</a> / <a href="https://twitter.com/shhetri">@shhetri</a></small>						
 					</p>
 					<p>
-						<small><a href="mailto:sumit.chhetri@yipl.com.np">sumit.chhetri@yipl.com.np</a></small>
-					</p>
-					<p>
-						<small>YIPL, Kumaripati, Lalitpur</small>
+						<small><a href="http://younginnovations.com.np/">YIPL</a> , Kumaripati, Lalitpur</small>
 					</p>
 				</section>
 
@@ -62,6 +60,7 @@
 							<li>Deployment?</li>
 							<li>Deployment Goals</li>
 							<li>Benefits of Automated Deployment</li>
+							<li>Some Infographics and Stats</li>
 							<li>Capistrano</li>
 						</ul>
 					</div>
@@ -69,10 +68,11 @@
 						<ul>
 							<li>Requirements</li>
 							<li>Terminology</li>
-							<li>How it works</li>
+							<li>How It Works</li>
+							<li>Future of Deployment</li>
 							<li>Demo</li>
 							<li>Any Questions?</li>
-							<li>Thank you</li>
+							<li>Thank
 						</ul>
 					</div>
 
@@ -81,8 +81,9 @@
 				<section>
 					<h2>Who AM I?</h2>
 					<p>Sumit Chhetri</p>
-					<p>Jr. Software Engineer @ YIPL</p>
-					<p>PHP & Laravel Developer</p>
+					<p>Jr. Software Engineer @ <a href="http://younginnovations.com.np/">YIPL</a></p>
+					<p><a href="https://secure.php.net/">PHP</a> Developer - 1 year of professional experience</p>
+					<p>Love to code in <a href="http://laravel.com/">Laravel</a> Framework</p>
 				</section>
 				<section>
 					<section>
@@ -92,6 +93,14 @@
 					<section>
 						<h2>Deployment</h2>
 						<p><a href="https://en.wikipedia.org/wiki/Software_deployment">Software deployment</a> is all of the activities that make a software system available for use</p>
+					    <ul>
+						    <li class="fragment fade-in">copy/clone code base to server</li>
+						    <li class="fragment fade-in">run composer commands</li>
+						    <li class="fragment fade-in">migrate your database</li>
+						    <li class="fragment fade-in">reload the web server</li>
+						    <li class="fragment fade-in">notify about the deployment</li>
+						    <li class="fragment fade-in">and so on...</li>
+						</ul>
 					</section>
 				</section>
 				<section>
@@ -100,9 +109,8 @@
 					</section>
 					<section>
 						<p>One-click / command deployment</p>
-					</section>
-					<section>
-						<p>Easy to integrate with PHP projects</p>
+						<img src="images/one-click-deploy.gif" class="no-margin" width="700px">
+					<div class="small-text">Source: <a href="http://devopsreactions.tumblr.com/post/41351304701/when-you-get-the-approval-to-deploy">devopsreactions.tumblr.com</a></div>
 					</section>
 					<section>
 						<p>Anytime & Anywhere</p>
@@ -114,10 +122,15 @@
 						<p>Nominal/No downtime (ZDD - zero downtime deployment)</p>
 					</section>
 					<section>
-						<p>Reliable Rollbacks</p>
+						<p class="fragment fade-in">Reliable Rollbacks</p>
+						<img src="images/realized-critical-bug.gif" class="no-margin" width="500px" height="400px">
+						<p>Pushed code to production, recalled there was a critical bug</p>
+					<div class="small-text">Source: <a href="http://devopsreactions.soup.io/post/307214750/Pushed-code-to-production-recalled-there-was">devopsreactions.tumblr.com</a></div>
 					</section>
 					<section>
-						<p>Reusable and can be replicated</p>
+						<p class="fragment fade-in">Reusable and should be reproducible</p>
+						<img src="images/reproducable-deploys.gif" class="no-margin" width="500px" height="400px">
+					<div class="small-text">Source: <a href="http://devopsreactions.tumblr.com/post/124908402692/reproducible-deployments">devopsreactions.tumblr.com</a></div>
 					</section>
 					<section>
 						<p>Scalable</p>
@@ -129,12 +142,24 @@
 					</section>
 					<section>
 						<p>Deployments become much less error-prone and much more repeatable</p>
+						<p class="fragment fade-in">compared to this...</p>
+						<div class="fragment fade-in">
+							<img src="images/error-prone-deploy.gif" class="no-margin" width="500px" height="400px">
+							<p class="small-text">This simulates a manual deployment</p>
+							<div class="small-text">Source: <a href="http://devopsreactions.tumblr.com/post/68251866244/successful-deployment-at-last">devopsreactions.tumblr.com</a></div>
+						</div>
 					</section>
 					<section>
 						<p>Anyone in the team with permission can deploy software</p>
 					</section>
 					<section>
-						<p>Engineers spend their time developing software</p>
+						<p>Engineers will spend most of their time developing software</p>
+						<p class="fragment fade-in">and not have to face this kind of situation...</p>
+						<div class="fragment fade-in">
+							<img src="images/problematic-deployment.gif" class="no-margin" width="500px" height="400ox">
+							<p class="small-text">Problematic deployment is over</p>	
+							<div class="small-text">Source: <a href="http://devopsreactions.tumblr.com/post/87681926341/problematic-deployment-is-over">devopsreactions.tumblr.com</a></div>
+						</div>
 					</section>
 					<section>
 						<p>Deploying to somewhere new is not a headache</p>
@@ -197,11 +222,8 @@
 				</section>
 				<section>
 					<section>
-						<h2>Capistrano</h2>
-						<p>A remote server automation and deployment tool written in Ruby</p>
-					</section>
-					<section>
-						<p>We chose capistrano because it is popular and most importantly fits for our use-case</p>
+						<h2><a href="http://capistranorb.com/">Capistrano</a></h2>
+						<p>A remote server automation and deployment tool written in <a href="https://www.ruby-lang.org/">Ruby</a></p>
 					</section>
 					<section>
 						<p>Originally a tool for deploying code</p>
@@ -210,7 +232,7 @@
 						<p>Evolved into remote multi-server automation tool</p>
 					</section>
 					<section>
-						<p>Uses SSH</p>
+						<p>Uses <a href="https://en.wikipedia.org/wiki/Secure_Shell">SSH</a></p>
 					</section>
 					<section>
 						<p>Does everything in parallel</p>
@@ -218,11 +240,16 @@
 					<section>
 						<p>Support these VCS out of the box</p>
 						<ul>
-							<li>Git 1.8 or higher</li>
-                            <li>Mercurial</li>
-                            <li>SVN</li>
+							<li><a href="https://git-scm.com/">Git</a> 1.8 or higher</li>
+                            <li><a href="https://mercurial.selenic.com/">Mercurial</a></li>
+                            <li><a href="https://subversion.apache.org/">SVN</a></li>
 						</ul>
-						
+					</section>
+					<section>
+						<p>Easy to integrate with PHP projects</p>
+					</section>
+					<section>
+						<p>We @ <a href="http://younginnovations.com.np/">YIPL</a> chose capistrano because it is popular and most importantly fits for our use-case</p>
 					</section>
 				</section>
 				<section>
@@ -284,16 +311,16 @@
 					</section>
 					<section>
 						<h3>Install Capistrano</h3>
-						<p><pre>$ gem install capistrano</pre></p>
+						<p><pre><code>$ gem install capistrano</code></pre></p>
 					</section>
 					<section>
 						<h3>Initialize Capistrano in the project</h3>
-						<p><pre>my_project $ cap install</pre></p>
+						<p><pre><code>my_project $ cap install</code></pre></p>
 					</section>
 					<section>
 						<h3>Creates this structure in the project</h3>
 						<p>
-						<pre>				
+						<pre><code>				
 ├── Capfile
 |── config
 │   ├── deploy
@@ -303,16 +330,16 @@
 └── lib
     └─ capistrano
        └── tasks
-	</pre>
+	</code></pre>
 						</p>
 					</section>
 					<section>
 						<h3>Configure deploy scripts and run</h3>
-						<p><pre>my_project $ cap staging deploy</p></pre>
+						<p><pre><code>my_project $ cap staging deploy</code></pre></p>
 					</section>
 					<section>
 						<h3>Creates this structure in server</h3>
-							<pre>
+							<pre><code>
 ├── current -> /var/www/my_app_name/releases/20150120114500/
 ├── releases
 │   ├── 20150080072500
@@ -325,10 +352,10 @@
 ├── revisions.log
 └── shared
     └── (linked_files and linked_dirs)
-    						</pre>
+    						</code></pre>
 					</section>
 				<section>
-					<h2>Next Steps?</h2>
+					<h2>Future of deployment</h2>
 					<p><a href="http://blog.flowdock.com/2014/11/11/chatops-devops-with-hubot/">Chat ops</a> with deploying from Hipchat using Hubot</p>
 					<p><a href="https://docker.com/">Docker</a> deployment but looks like a problem in Internet challenged Nepal :)</p>
 				</section>
@@ -338,6 +365,27 @@
 				</section>
 				<section>
 					<h2>Any Questions???</h2>
+					<div class="fragment fade-in">
+						<p>You can drop me a message via</p>
+						<table>
+							<tr>
+								<td>Email :</td>
+								<td><a href="mailto:sumit.chhetri@yipl.com.np">sumit.chhetri@yipl.com.np</a></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><a href="mailto:er.sumit.chhetri@gmail.com">er.sumit.chhetri@gmail.com</a></td>
+							</tr>
+							<tr>
+								<td>Facebook :</td>
+								<td><a href="https://www.facebook.com/SHhetri">Sumit Chhetri</a></td>
+							</tr>
+							<tr>
+								<td>Twitter :</td>
+								<td><a href="https://twitter.com/shhetri">@shhetri</a></td>
+							</tr>
+						</table>
+					</div>
 				</section>
 				<section>
 					<h2>Thank you</h2>
@@ -357,6 +405,7 @@
 				progress: true,
 				history: true,
 				center: true,
+				fragments: true,
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
@@ -367,8 +416,13 @@
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
+					{ src: 'plugin/notes/notes.js', async: true },
+					// { src: 'plugin/remotes/remotes.js', async: true }
+				],
+				keyboard: {
+					    39: 'next',
+					    37: 'prev'
+					}
 			});
 
 		</script>
