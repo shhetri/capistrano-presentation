@@ -47,7 +47,7 @@
 			<div class="slides">
 				<section>
 					<h2>Still stuck with FTP or git pull to deploy?</h2>
-					<h2>It is high time to embrace Automated Deployment with Capistrano</h2>
+					<h2>It's high time to embrace Automated Deployment with Capistrano</h2>
 					<hr>
 					<p>
 						<small>Created by <a target="_blank" href="https://www.facebook.com/SHhetri">Sumit Chhetri</a> / <a target="_blank" href="https://twitter.com/shhetri">@shhetri</a></small>						
@@ -73,9 +73,8 @@
 						<ul>
 							<li>Requirements</li>
 							<li>Terminology</li>
-							<li>How It Works</li>
-							<li>Future of Deployment</li>
 							<li>Demo</li>
+							<li>Future of Deployment</li>
 							<li>Any Questions?</li>
 							<li>Thank You</li>
 						</ul>
@@ -87,7 +86,7 @@
 					<h2>Who AM I?</h2>
 					<p>Sumit Chhetri</p>
 					<p>Jr. Software Engineer @ <a target="_blank" href="http://younginnovations.com.np/">YIPL</a></p>
-					<p><a target="_blank" href="https://secure.php.net/">PHP</a> Developer - 1 year of professional experience</p>
+					<p><a target="_blank" href="https://secure.php.net/">PHP</a> Developer</p>
 					<p>Love to code in <a target="_blank" href="http://laravel.com/">Laravel</a> Framework</p>
 				</section>
 				<section>
@@ -133,9 +132,7 @@
 					<div class="small-text">Source: <a target="_blank" href="http://devopsreactions.soup.io/post/307214750/Pushed-code-to-production-recalled-there-was">devopsreactions.tumblr.com</a></div>
 					</section>
 					<section>
-						<p class="fragment fade-in">Reusable and should be reproducible</p>
-						<img src="images/reproducable-deploys.gif" class="no-margin" width="500px" height="400px">
-					<div class="small-text">Source: <a target="_blank" href="http://devopsreactions.tumblr.com/post/124908402692/reproducible-deployments">devopsreactions.tumblr.com</a></div>
+						<p>Reusable and should be reproducible (repeatable)</p>
 					</section>
 					<section>
 						<p>Scalable</p>
@@ -175,7 +172,7 @@
 				</section>
 				<section>
 					<h2>Good, but how do developers deploy?</h2>
-					<img src="images/deployment-tools-np.png" class="no-margin">
+					<img src="images/deployment-tools-np.png" class="no-margin" width="600px" height="500px">
 					<div class="small-text">Source: <a target="_blank" href="http://bit.ly/sw-eng-np-pt3">Geshan.com.np</a></div>
 				</section>
 				<section>
@@ -195,35 +192,35 @@
 						<tr>
 							<td><a target="_blank" href="http://capistranorb.com/">Capistrano</a></td>
 							<td>Ruby</td>
-							<td><a target="_blank" href="https://github.com/capistrano/capistrano">7827</a></td>
-							<td>325</td>
-						</tr>
-						<tr>
-							<td><a target="_blank" href="http://mina-deploy.github.io/mina//">Mina</a></td>
-							<td>Ruby</td>
-							<td><a target="_blank" href="https://github.com/mina-deploy/mina">2619</a></td>
-							<td>91</td>
+							<td><a target="_blank" href="https://github.com/capistrano/capistrano">7476</a></td>
+							<td>329</td>
 						</tr>
 						<tr>
 							<td><a target="_blank" href="http://www.fabfile.org/">Fabric</a></td>
 							<td>Python</td>
-							<td><a target="_blank" href="https://github.com/fabric/fabric">5615</a></td>
-							<td>304</td>
+							<td><a target="_blank" href="https://github.com/fabric/fabric">5833</a></td>
+							<td>316</td>
+						</tr>
+						<tr>
+							<td><a target="_blank" href="http://mina-deploy.github.io/mina//">Mina</a></td>
+							<td>Ruby</td>
+							<td><a target="_blank" href="https://github.com/mina-deploy/mina">2701</a></td>
+							<td>90</td>
 						</tr>
 						<tr>
 							<td><a target="_blank" href="http://rocketeer.autopergamene.eu/">Rocketeer</a></td>
 							<td>PHP</td>
-							<td><a target="_blank" href="https://github.com/rocketeers/rocketeer">1664</a></td>
-							<td>84</td>
+							<td><a target="_blank" href="https://github.com/rocketeers/rocketeer">1731</a></td>
+							<td>81</td>
 						</tr>
 						<tr>
-							<td><a target="_blank" href="http://magephp.com/">Magallanes</a></td>
+							<td><a target="_blank" href="http://deployer.org/">Deployer</a></td>
 							<td>PHP</td>
-							<td><a target="_blank" href="https://github.com/andres-montanez/Magallanes">385</a></td>
-							<td>23</td>
+							<td><a target="_blank" href="https://github.com/deployphp/deployer">1334</a></td>
+							<td>85</td>
 						</tr>
 					</table>
-					<div class="small-text">Source: Github.com, data from 16-Jul-2015</div>
+					<div class="small-text">Source: <a target="_blank" href="https://github.com/">Github.com</a>, data from 04-Sep-2015</div>
 				</section>
 				<section>
 					<section>
@@ -311,62 +308,15 @@
 					</section>
 				</section>
 				<section>
-					<section>
-						<h2>How it works</h2>
-					</section>
-					<section>
-						<h3>Install Capistrano</h3>
-						<p><pre><code>$ gem install capistrano</code></pre></p>
-					</section>
-					<section>
-						<h3>Initialize Capistrano in the project</h3>
-						<p><pre><code>my_project $ cap install</code></pre></p>
-					</section>
-					<section>
-						<h3>Creates this structure in the project</h3>
-						<p>
-						<pre><code>				
-├── Capfile
-|── config
-│   ├── deploy
-│   │   ├── production.rb
-│   │   └── staging.rb
-│   └── deploy.rb
-└── lib
-    └─ capistrano
-       └── tasks
-	</code></pre>
-						</p>
-					</section>
-					<section>
-						<h3>Configure deploy scripts and run</h3>
-						<p><pre><code>my_project $ cap staging deploy</code></pre></p>
-					</section>
-					<section>
-						<h3>Creates this structure in server</h3>
-							<pre><code>
-├── current -> /var/www/my_app_name/releases/20150120114500/
-├── releases
-│   ├── 20150080072500
-│   ├── 20150090083000
-│   ├── 20150100093500
-│   ├── 20150110104000
-│   └── 20150120114500
-├── repo
-│   └── (VCS related data)
-├── revisions.log
-└── shared
-    └── (linked_files and linked_dirs)
-    						</code></pre>
-					</section>
+					<h2>Demo</h2>
+					<video controls>
+						<source class="stretch" data-src="video/deploy-demo.mp4" type="video/mp4" />
+					</video>
+				</section>
 				<section>
 					<h2>Future of deployment</h2>
 					<p><a target="_blank" href="http://blog.flowdock.com/2014/11/11/chatops-devops-with-hubot/">Chat ops</a> with deploying from Hipchat using Hubot</p>
 					<p><a target="_blank" href="https://docker.com/">Docker</a> deployment but looks like a problem in Internet challenged Nepal :)</p>
-				</section>
-				<section>
-						<h2>Demo</h2>
-					<p>Put a screen-shot here :)</p>
 				</section>
 				<section>
 					<h2>Any Questions???</h2>
@@ -393,13 +343,13 @@
 						<hr/>
 						<br/>
 						<div class="fragment fade-in">
-							Visit <a target="_blank" href="http://blog.yipl.com.np/">YIPL-Blog</a>. I will soon be publishing a blog on Capistrano.
+							Visit <a target="_blank" href="http://blog.yipl.com.np/">YIPL-Blog</a> to read more on this.
 						</div>
 					</div>
 				</section>
 				<section>
 					<h2>Thank you</h2>
-					<p class="fragment fade-in"><a target="_blank" href="http://geshan.com.np/">Geshan Manandar</a></p>
+					<p class="fragment fade-in"><a target="_blank" href="http://geshan.com.np/">Geshan Manandhar</a></p>
 					<p class="fragment fade-in">PHP Developers Meetup #14 Team</p>
 					<p class="fragment fade-in">All of you</p>
 				</section>
@@ -415,7 +365,7 @@
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				controls: true,
-				progress: true,
+				progress: false,
 				history: true,
 				center: true,
 				fragments: true,
@@ -430,7 +380,6 @@
 					{ src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/plugin/highlight/highlight.min.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/plugin/zoom-js/zoom.min.js', async: true },
 					{ src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/plugin/notes/notes.min.js', async: true },
-					// { src: 'plugin/remotes/remotes.js', async: true }
 				],
 				keyboard: {
 					    39: 'next',
@@ -439,6 +388,5 @@
 			});
 
 		</script>
-
 	</body>
 </html>
